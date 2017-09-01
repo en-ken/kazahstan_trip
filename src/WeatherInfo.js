@@ -69,30 +69,26 @@ export default class WeatherInfo extends Component{
           <Table>
             <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
               <TableRow>
-                <TableHeaderColumn/>
+                <TableHeaderColumn>都市</TableHeaderColumn>
                 <TableHeaderColumn>{astana[0].date.substr(0, 2)}</TableHeaderColumn>
                 <TableHeaderColumn>{astana[1].date.substr(0, 2)}</TableHeaderColumn>
-                <TableHeaderColumn>{astana[2].date.substr(0, 2)}</TableHeaderColumn>
               </TableRow>
             </TableHeader>
-            <TableBody displayRowCheckbox={false} >
+            <TableBody displayRowCheckbox={false} stripedRows={false} >
               <TableRow>
-                <TableRowColumn>アスタナ</TableRowColumn>
-                <TableRowColumn>{translateWeather(astana[0].text)}<br/>({astana[0].low}℃/{astana[0].high}℃)</TableRowColumn>
-                <TableRowColumn>{translateWeather(astana[1].text)}<br/>({astana[1].low}℃/{astana[1].high}℃)</TableRowColumn>
-                <TableRowColumn>{translateWeather(astana[2].text)}<br/>({astana[2].low}℃/{astana[2].high}℃)</TableRowColumn>
+                <TableRowColumn>AST</TableRowColumn>
+                <TableRowColumn>{translateWeather(astana[0].text)}<br/>{astana[0].low}℃<br/>{astana[0].high}℃</TableRowColumn>
+                <TableRowColumn>{translateWeather(astana[1].text)}<br/>{astana[1].low}℃<br/>{astana[1].high}℃</TableRowColumn>
               </TableRow>
               <TableRow>
-                <TableRowColumn>アルマティ</TableRowColumn>
-                <TableRowColumn>{translateWeather(almaty[0].text)}<br/>({almaty[0].low}℃/{almaty[0].high}℃)</TableRowColumn>
-                <TableRowColumn>{translateWeather(almaty[1].text)}<br/>({almaty[1].low}℃/{almaty[1].high}℃)</TableRowColumn>
-                <TableRowColumn>{translateWeather(almaty[2].text)}<br/>({almaty[2].low}℃/{almaty[2].high}℃)</TableRowColumn>
+                <TableRowColumn >ALM</TableRowColumn>
+                <TableRowColumn>{translateWeather(almaty[0].text)}<br/>{almaty[0].low}℃<br/>{almaty[0].high}℃</TableRowColumn>
+                <TableRowColumn>{translateWeather(almaty[1].text)}<br/>{almaty[1].low}℃<br/>{almaty[1].high}℃</TableRowColumn>
               </TableRow>
               <TableRow>
-                <TableRowColumn>シムケント</TableRowColumn>
-                <TableRowColumn>{translateWeather(shymkent[0].text)}<br/>({shymkent[0].low}℃/{shymkent[0].high}℃)</TableRowColumn>
-                <TableRowColumn>{translateWeather(shymkent[1].text)}<br/>({shymkent[1].low}℃/{shymkent[1].high}℃)</TableRowColumn>
-                <TableRowColumn>{translateWeather(shymkent[2].text)}<br/>({shymkent[2].low}℃/{shymkent[2].high}℃)</TableRowColumn>
+                <TableRowColumn >SHYM</TableRowColumn>
+                <TableRowColumn>{translateWeather(shymkent[0].text)}<br/>{shymkent[0].low}℃<br/>{shymkent[0].high}℃</TableRowColumn>
+                <TableRowColumn>{translateWeather(shymkent[1].text)}<br/>{shymkent[1].low}℃<br/>{shymkent[1].high}℃</TableRowColumn>
               </TableRow>
             </TableBody>
           </Table>

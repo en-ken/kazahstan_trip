@@ -54,7 +54,7 @@ class App extends Component {
           summary='一日フリー'
         />  
         <DayCard
-          date = '05 Sep 2017'
+          date = '9/5(TUE)'
           schedule = '移動日'
           event = 'flight'
           summary ='アスタナからシムケントへ'
@@ -84,7 +84,7 @@ class App extends Component {
           }
         />  
         <DayCard
-          date = '06 Sep 2017'
+          date = '9/6(WED)'
           schedule = 'シムケント（寝台車泊）'
           event = 'rail'
           summary ='シムケントを見て寝台列車でアルマティへ'
@@ -100,7 +100,7 @@ class App extends Component {
           }
         />  
         <DayCard
-          date = '07 Sep 2017'
+          date = '9/7(THU)'
           schedule = 'アルマティ着'
           event = 'stay'
           summary='一日フリー'
@@ -112,13 +112,13 @@ class App extends Component {
           }
         />  
         <DayCard
-          date = '08 Sep 2017'
+          date = '9/8(FRI)'
           schedule = 'アルマティ'
           event = 'stay'
           summary ='一日フリー'
         />  
         <DayCard
-          date = '09 Sep 2017'
+          date = '9/9(SAT)'
           schedule = '移動日'
           event = 'flight'
           summary ='帰国日'
