@@ -3,12 +3,14 @@ import DayCard from './DayCard';
 import MovingSchedule from './MovingSchedule';
 import StayPlace from './StayPlace';
 import CurrencyRate from './CurrencyRate';
+import WeatherInfo from './WeatherInfo';
 
 class App extends Component {
   render() {
     return (
       <div>
         <CurrencyRate/>
+        <WeatherInfo/>
         <DayCard
           date='9/2(SAT)'
           schedule='出国日'
@@ -40,19 +42,19 @@ class App extends Component {
           }
         />  
         <DayCard
-          date = '9/3(SUN)'
-          schedule = 'アスタナ'
-          event = 'stay'
-          summary ='一日フリー'
+          date='9/3(SUN)'
+          schedule='アスタナ'
+          event='stay'
+          summary='一日フリー'
         />  
         <DayCard
           date = '9/4(MON)'
           schedule = 'アスタナ'
           event = 'stay'
-          summary ='一日フリー'
+          summary='一日フリー'
         />  
         <DayCard
-          date = '9/5(TUE)'
+          date = '05 Sep 2017'
           schedule = '移動日'
           event = 'flight'
           summary ='アスタナからシムケントへ'
@@ -82,7 +84,7 @@ class App extends Component {
           }
         />  
         <DayCard
-          date = '9/6(WED)'
+          date = '06 Sep 2017'
           schedule = 'シムケント（寝台車泊）'
           event = 'rail'
           summary ='シムケントを見て寝台列車でアルマティへ'
@@ -98,7 +100,7 @@ class App extends Component {
           }
         />  
         <DayCard
-          date = '9/7(THU)'
+          date = '07 Sep 2017'
           schedule = 'アルマティ着'
           event = 'stay'
           summary='一日フリー'
@@ -110,13 +112,13 @@ class App extends Component {
           }
         />  
         <DayCard
-          date = '9/8(FRI)'
+          date = '08 Sep 2017'
           schedule = 'アルマティ'
           event = 'stay'
           summary ='一日フリー'
         />  
         <DayCard
-          date = '9/9(SAT)'
+          date = '09 Sep 2017'
           schedule = '移動日'
           event = 'flight'
           summary ='帰国日'

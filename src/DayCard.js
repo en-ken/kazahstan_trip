@@ -37,7 +37,7 @@ const DayCard = (props) => {
   return (
     <Card style={{ margin: 10 }}>
       <CardHeader
-        title={date}
+        title={date.substring(0,2)}
         subtitle={schedule}
         avatar={getIcon(event)}
         actAsExpander={expandable}
