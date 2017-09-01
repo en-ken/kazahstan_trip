@@ -105,44 +105,29 @@ export default class CurrencyRate extends Component {
       });
   }
 
-  KZTChanged(event, val) {
-    if (!this.validate(val)) {
-      this.setCurrency(1);
-      return;
-    }
-
+  KZTChanged(event, value) {
+    const val = this.validate(value);
     this.setState({ KZT: val });
     this.setState({ USD: val/this.state.USD_KZT });
     this.setState({ JPY: val/this.state.JPY_KZT });
   }
 
-  USDChanged(event, val) {
-    if (!this.validate(val)) {
-      this.setCurrency(1);
-      return;
-    }
-
+  USDChanged(event, value) {
+    const val = this.validate(value);
     this.setState({ USD: val });
     this.setState({ KZT: val*this.state.USD_KZT });
     this.setState({ JPY: val*this.state.USD_KZT/this.state.JPY_KZT });
   }
 
-  JPYChanged(event, val) {
-    if (!this.validate(val)) {
-      this.setCurrency(1);
-      return;
-    }
-
+  JPYChanged(event, value) {
+    const val = this.validate(value);
     this.setState({ JPY: val });
     this.setState({ KZT: val*this.state.JPY_KZT });
     this.setState({ USD: val*this.state.JPY_KZT/this.state.USD_KZT });
   }
 
   validate(val) {
-    if (!val.match(/^[0-9\\.]+$/)) {
-      return false;
-    }
-    return true;
+    return parseFloat(val) || 0;
   }
 
   setCurrency(usd) {
