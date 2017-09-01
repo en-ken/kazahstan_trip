@@ -42,18 +42,18 @@ const DayCard = (props) => {
         avatar={getIcon(event)}
         actAsExpander={expandable}
         showExpandableButton={expandable}
-        style={{ 'background-color': bgColor }}
+        style={{ backgroundColor: bgColor }}
       />
       <CardText
-        style={{ 'background-color': bgColor }}
+        style={{ backgroundColor: bgColor }}
+        actAsExpander={true}
       >
         {summary}
       </CardText>
       if({expandable}){
         <CardText
           expandable={true}
-          actAsExpander={true}
-          style={{ 'background-color': bgColor }}
+          style={{ backgroundColor: bgColor }}
         >
           {content}
         </CardText>

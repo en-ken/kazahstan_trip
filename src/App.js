@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DayCard from './DayCard';
-import FlightSchedule from './FlightSchedule';
+import MovingSchedule from './MovingSchedule';
 import StayPlace from './StayPlace';
 
 class App extends Component {
@@ -14,17 +14,17 @@ class App extends Component {
           summary='12:00 成田第一ターミナル集合'
           content={
             <div>
-              <FlightSchedule
-                flight='アシアナ航空103'
-                flightTime='2h30m'
+              <MovingSchedule
+                service='アシアナ航空103'
+                totalTime='2h30m'
                 depTime='13:50'
                 depPort='東京(NRT)'
                 arrTime='16:20'
                 arrPort='ソウル(ICN)'
               />
-              <FlightSchedule
-                flight='アシアナ航空579'
-                flightTime='7h10m'
+              <MovingSchedule
+                service='アシアナ航空579'
+                totalTime='7h10m'
                 depTime='18:25'
                 depPort='ソウル(ICN)'
                 arrTime='22:35'
@@ -56,21 +56,21 @@ class App extends Component {
           summary ='アスタナからシムケントへ'
           content={
             <div>
-              <FlightSchedule
-                flight = 'エアアスタナ854'
-                flightTime='1h40m'
-                depTime='15:40'
-                depPort='アスタナ(TSE)'
-                arrTime='17:20'
-                arrPort='アルマティ(ALA)'
+              <MovingSchedule
+                service = 'エアアスタナ854'
+                totalTime ='1h40m'
+                depTime ='15:40'
+                depPort ='アスタナ(TSE)'
+                arrTime ='17:20'
+                arrPort ='アルマティ(ALA)'
               />
-              <FlightSchedule
-                flight = 'SCAT航空706'
-                flightTime='1h10m'
-                depTime='20:55'
-                depPort='アルマティ(ALA)'
-                arrTime='22:05'
-                arrPort='シムケント'
+              <MovingSchedule
+                service = 'SCAT航空706'
+                totalTime ='1h10m'
+                depTime ='20:55'
+                depPort ='アルマティ(ALA)'
+                arrTime ='22:05'
+                arrPort ='シムケント'
               />
               <StayPlace
                 name='Symkent Hotel'
@@ -85,13 +85,13 @@ class App extends Component {
           event = 'rail'
           summary ='シムケントを見て寝台列車でアルマティへ'
           content={
-            <FlightSchedule
-              flight = 'カザフスタン鉄道012X(予定)'
-              flightTime='11h30m'
-              depTime='22:01'
-              depPort='シムケント駅'
-              arrTime='9:30'
-              arrPort='アルマティ2駅'
+            <MovingSchedule
+              service = 'カザフスタン鉄道012X(予定)'
+              totalTime ='11h30m'
+              depTime ='22:01'
+              depPort ='シムケント駅'
+              arrTime ='9:30'
+              arrPort ='アルマティ2駅'
             />
           }
         />  
@@ -120,21 +120,21 @@ class App extends Component {
           summary ='帰国日'
           content={
             <div>
-              <FlightSchedule
-                flight = 'エアアスタナ959'
-                flightTime='5h40m'
-                depTime='23:55'
-                depPort='アルマティ(ALA)'
-                arrTime='8:35'
-                arrPort='ソウル(ICN)'
+              <MovingSchedule
+                service = 'エアアスタナ959'
+                totalTime = '5h40m'
+                depTime = '23:55'
+                depPort = 'アルマティ(ALA)'
+                arrTime = '8:35'
+                arrPort = 'ソウル(ICN)'
               />
-              <FlightSchedule
-                flight = 'アシアナ航空104'
-                flightTime='2h20m'
-                depTime='10:00'
-                depPort='ソウル(ICN)'
-                arrTime='12:20'
-                arrPort='東京(NRT)'
+              <MovingSchedule
+                service = 'アシアナ航空104'
+                totalTime = '2h20m'
+                depTime = '10:00'
+                depPort = 'ソウル(ICN)'
+                arrTime = '12:20'
+                arrPort = '東京(NRT)'
               />
             </div>
           }

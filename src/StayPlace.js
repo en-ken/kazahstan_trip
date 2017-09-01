@@ -9,7 +9,7 @@ import HotelIcon from 'material-ui/svg-icons/maps/hotel';
 import {grey800 as stayColor} from 'material-ui/styles/colors';
 
 const StayPlace = (props) => (
-  <Card>P
+  <Card>
     <CardHeader
       title='宿泊先'
       avatar={<HotelIcon color={stayColor} />}
