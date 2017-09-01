@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import DayCard from './DayCard';
 import MovingSchedule from './MovingSchedule';
 import StayPlace from './StayPlace';
+import CurrencyRate from './CurrencyRate';
 
 class App extends Component {
   render() {
     return (
       <div>
+        <CurrencyRate/>
         <DayCard
           date='9/2(SAT)'
           schedule='出国日'
