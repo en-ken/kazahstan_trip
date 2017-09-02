@@ -115,14 +115,14 @@ export default class CurrencyRate extends Component {
   USDChanged(event, value) {
     const val = this.validate(value);
     this.setState({ USD: val });
-    this.setState({ KZT: val*this.state.USD_KZT });
-    this.setState({ JPY: val*this.state.USD_KZT/this.state.JPY_KZT });
+    this.setState({ KZT: parseInt(val*this.state.USD_KZT, 10) });
+    this.setState({ JPY: parseInt(val*this.state.USD_KZT/this.state.JPY_KZT, 10) });
   }
 
   JPYChanged(event, value) {
     const val = this.validate(value);
     this.setState({ JPY: val });
-    this.setState({ KZT: val*this.state.JPY_KZT });
+    this.setState({ KZT: parseInt(val*this.state.JPY_KZT) });
     this.setState({ USD: val*this.state.JPY_KZT/this.state.USD_KZT });
   }
 
@@ -132,8 +132,8 @@ export default class CurrencyRate extends Component {
 
   setCurrency(usd) {
     this.setState({ USD: usd });
-    this.setState({ KZT: usd*this.state.USD_KZT });
-    this.setState({ JPY: this.state.KZT/this.state.JPY_KZT });
+    this.setState({ KZT: parseInt(usd*this.state.USD_KZT) });
+    this.setState({ JPY: parseInt(this.state.KZT/this.state.JPY_KZT) });
   }
 }
 
